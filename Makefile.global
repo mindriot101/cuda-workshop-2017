@@ -1,0 +1,10 @@
+all:
+	@echo "clean or build?"
+
+build:
+	find . -maxdepth 1 -mindepth 1 -type d -exec make -C {} \;
+
+clean:
+	find . -maxdepth 1 -mindepth 1 -type d -exec make -C {} clean \;
+
+.PHONY: clean all build

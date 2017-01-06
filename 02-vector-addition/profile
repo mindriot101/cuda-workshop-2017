@@ -1,0 +1,12 @@
+==8684== NVPROF is profiling process 8684, command: ./a.out
+==8684== Profiling application: ./a.out
+==8684== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput           Device   Context    Stream  Name
+442.28ms  3.2960us                    -               -         -         -         -  16.000KB  4.6295GB/s    GRID K520 (0)         1         7  [CUDA memcpy HtoD]
+442.30ms  3.2960us                    -               -         -         -         -  16.000KB  4.6295GB/s    GRID K520 (0)         1         7  [CUDA memcpy HtoD]
+442.99ms  13.743ms              (4 8 1)       (128 1 1)        16        0B        0B         -           -    GRID K520 (0)         1         7  vector_add_kernel(int*, int*, int*) [103]
+507.17ms  5.1840us                    -               -         -         -         -  16.000KB  2.9434GB/s    GRID K520 (0)         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
